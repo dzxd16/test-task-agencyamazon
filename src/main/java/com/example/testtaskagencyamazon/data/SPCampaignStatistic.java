@@ -87,4 +87,6 @@ public class SPCampaignStatistic extends CampaignStatistic<SPCampaignStatistic> 
     return analytic;
   }
 
+
+
 }

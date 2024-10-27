@@ -73,6 +73,7 @@ class CampaignStatServiceTest {
     assertEquals(campaignReport.getImpressions(), campaignStatisticResult.getImpressions());
     assertEquals(finalRound(campaignReport.getCost()), campaignStatisticResult.getCost());
     assertEquals(finalRound(campaignReport.getCostPerClick()), campaignStatisticResult.getCostPerClick());
+    assertEquals(finalRound(campaignReport.getCostPerClick()), campaignStatisticResult.getCostPerClick());
     assertEquals(campaignReport.getPurchases14d(), campaignStatisticResult.getPurchases());
   }
 
@@ -112,7 +113,8 @@ class CampaignStatServiceTest {
     assertEquals(campaign.getName(), campaignStatisticResult.getCampaignName());
 
     Integer expectedClicks = campaignReport1.getClicks() + campaignReport2.getClicks();
-    assertEquals(expectedClicks, campaignStatisticResult.getClicks());
+    Integer getClicks =campaignStatisticResult.getClicks();
+    assertEquals(expectedClicks, getClicks);
 
     Integer expectedImpressions = campaignReport1.getImpressions() + campaignReport2.getImpressions();
     assertEquals(expectedImpressions, campaignStatisticResult.getImpressions());
